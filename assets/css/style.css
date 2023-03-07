@@ -46,7 +46,7 @@ body {
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  transition: opacity 1.5s ease-in;
+  transition: opacity 1.6s ease-in;
   
 }
 
@@ -248,10 +248,13 @@ footer a:visited {
     no-repeat;
   background-size: cover;
   overflow: hidden;
-  
+  transition: 1.6s;
   
 }
 
+.box-black {
+  filter: brightness(0.7);
+}
 
 
 
