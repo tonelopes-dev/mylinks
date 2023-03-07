@@ -1,0 +1,250 @@
+:root {
+  --text-color: white;
+  --text-color-hover: white;
+
+  --bg-mb-url: url(../img/Mobile/bg-dark-mobile.jpg);
+  --bg-desktop-url: url(../img/Desktop/bg-dark.jpg);
+
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --switch-bg-url: url(../icons/moon-stars.svg);
+}
+
+.light {
+  --text-color: rgb(255, 255, 255);
+
+  --bg-mb-url: url(../img/Mobile/bg-dark-light.jpg);
+  --bg-desktop-url: url(../img/Desktop/bg-light.jpg);
+
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --switch-bg-url: url(../icons/sun.svg);
+}
+
+body {
+  /*  background-image: url(../img/Mobile/bg-dark-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; */
+
+  /*background: color image repeat position/size*/
+  background: var(--bg-desktop-url) no-repeat top center/cover;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+.container {
+  opacity: 0;
+  width: 360px;
+  margin: 56px auto;
+  padding: 0 24px;
+  border-radius: 10px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: opacity 1.5s ease-in;
+}
+
+.displayOn {
+  opacity: 1;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile p {
+  padding: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#profile img {
+  width: 112px;
+  margin-bottom: 8px;
+  border-radius: 100%;
+  box-shadow: 0.1rem 0.1rem 1rem 0.1rem #41c3ff;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/*Switch*/
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: #fff var(--switch-bg-url) no-repeat center;
+  border-radius: 50%;
+  border: 0;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 999px;
+}
+
+/*Links*/
+
+ul {
+  padding: 24px 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li {
+  text-align: center;
+  margin-left: 10px;
+  min-width: 230px;
+}
+
+ul li:hover {
+  -xpedu-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
+ul li a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  padding: 16px 24px;
+  font-weight: 500;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid var(--stroke-color);
+ /*  background: var(--surface-color); */
+ /* background: rgb(0,156,49);
+background: linear-gradient(227deg, rgba(0,156,49,1) 0%, rgba(0,5,145,1) 100%) ; */
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  transition: background 0.3s;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  
+ /*  background: linear-gradient(90deg, #136FFA, #00f5cc, #0DFFBA, #0BDED3); */
+  background-size: 400%;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+ul li a:hover {
+  
+  border: 1.5px solid #007fff;
+  animation: animation 8s linear infinite;
+  border: none;
+  background: linear-gradient(90deg, #136FFA, #00f5cc, #0DFFBA, #0BDED3);
+  @keyframes animation {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+}
+
+
+ul li a:hover::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #136FFA, #00f5cc, #0DFFBA, #0BDED3);;
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+}
+ul li a:hover::before {
+  filter: blur(20px);
+}
+ul li a:visited {
+  color: var(--text-color);
+}
+
+ul li a i {
+  font-size: 24px;
+  margin-right: 14px;
+}
+
+ul li:hover a {
+  color: var(--text-color-hover);
+}
+
+ul li:hover a i {
+  color: var(--text-color-hover);
+}
+
+footer {
+  padding: 32px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+footer a {
+  color: var(--text-color);
+}
+
+footer a:visited {
+  color: #fff;
+}
+
+/**/
+
+#bg_video {
+  align-self: center;
+  position: fixed;
+  margin-top: -15%;
+  margin-left: -5%;
+  width: auto;
+  height: 125%;
+  z-index: -100;
+  background: url("../video/fantastic-video-with-a-man-in-a-spacesuit-and-info-2022-08-05-02-16-19-utc.mp4")
+    no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
