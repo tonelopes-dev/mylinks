@@ -30,7 +30,7 @@ body {
     background-size: cover; */
 
   /*background: color image repeat position/size*/
-  background: var(--bg-desktop-url) no-repeat top center/cover;
+  /* background: var(--bg-desktop-url) no-repeat top center/cover; */
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
@@ -47,15 +47,18 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   transition: opacity 1.5s ease-in;
+  
 }
+
 
 .displayOn {
   opacity: 1;
+  
 }
 
 #profile {
   text-align: center;
-  padding: 24px;
+  padding: 40px 24px 12px 24px;
 }
 
 #profile p {
@@ -144,8 +147,8 @@ ul li a {
   border-radius: 10px;
   position: relative;
   border: 1px solid var(--stroke-color);
- /*  background: var(--surface-color); */
- /* background: rgb(0,156,49);
+  /*  background: var(--surface-color); */
+  /* background: rgb(0,156,49);
 background: linear-gradient(227deg, rgba(0,156,49,1) 0%, rgba(0,5,145,1) 100%) ; */
 
   backdrop-filter: blur(4px);
@@ -162,19 +165,18 @@ ul li a:before {
   right: -5px;
   bottom: -5px;
   z-index: -1;
-  
- /*  background: linear-gradient(90deg, #136FFA, #00f5cc, #0DFFBA, #0BDED3); */
+
+  /*  background: linear-gradient(90deg, #136FFA, #00f5cc, #0DFFBA, #0BDED3); */
   background-size: 400%;
   border-radius: 10px;
   transition: 1s;
 }
 
 ul li a:hover {
-  
   border: 1.5px solid #007fff;
   animation: animation 8s linear infinite;
   border: none;
-  background: linear-gradient(90deg, #136FFA, #00f5cc, #0DFFBA, #0BDED3);
+  background: linear-gradient(90deg, #136ffa, #00f5cc, #0dffba, #0bded3);
   @keyframes animation {
     0% {
       background-position: 0%;
@@ -185,7 +187,6 @@ ul li a:hover {
   }
 }
 
-
 ul li a:hover::before {
   content: "";
   position: absolute;
@@ -194,7 +195,7 @@ ul li a:hover::before {
   right: -5px;
   bottom: -5px;
   z-index: -1;
-  background: linear-gradient(90deg, #136FFA, #00f5cc, #0DFFBA, #0BDED3);;
+  background: linear-gradient(90deg, #136ffa, #00f5cc, #0dffba, #0bded3);
   background-size: 400%;
   border-radius: 35px;
   transition: 1s;
@@ -235,16 +236,81 @@ footer a:visited {
 
 /**/
 
+
+
 #bg_video {
-  align-self: center;
   position: fixed;
-  margin-top: -15%;
-  margin-left: -5%;
-  width: auto;
-  height: 125%;
+  
+   top: 0;
+  
   z-index: -100;
-  background: url("../video/fantastic-video-with-a-man-in-a-spacesuit-and-info-2022-08-05-02-16-19-utc.mp4")
-    no-repeat center;
+  background: url("../video/video-bg-dark.mp4")
+    no-repeat;
   background-size: cover;
   overflow: hidden;
+  
+  
 }
+
+
+
+
+@media only screen and (max-width: 1680px) {
+  #bg_video {
+    
+    left: -130px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1440px) {
+  #bg_video {
+    
+    left: -230px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (max-width: 1200px) {
+  #bg_video {
+    
+    left: -350px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #bg_video {
+   
+    left: -420px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #bg_video {
+    
+    left: -600px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  #bg_video {
+    
+    left: -680px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #bg_video {
+   
+    left: -750px;
+  }
+}
+
+
+
+
+
+
+
