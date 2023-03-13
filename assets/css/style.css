@@ -157,6 +157,10 @@ background: linear-gradient(227deg, rgba(0,156,49,1) 0%, rgba(0,5,145,1) 100%) ;
   transition: background 0.3s;
 }
 
+ul li a:link {
+  color: var(--text-color);
+}
+
 ul li a:before {
   content: "";
   position: absolute;
