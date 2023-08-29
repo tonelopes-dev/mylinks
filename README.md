@@ -2,8 +2,8 @@
   <img alt="foto-do-projeto" src="./assets/img/print-project/projeto-mylinks.jpg">
 </p>
 
-<br>
-Acesse aqui -> [Acessar o Projeto](https://tonelopes-dev.github.io/mylinks/)
+
+[Acessar o Projeto](https://tonelopes-dev.github.io/mylinks/)
 <br>
 
 ## 🚀 Tecnologias
