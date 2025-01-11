@@ -24,13 +24,6 @@
 }
 
 body {
-  /*  background-image: url(../img/Mobile/bg-dark-mobile.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover; */
-
-  /*background: color image repeat position/size*/
-  /* background: var(--bg-desktop-url) no-repeat top center/cover; */
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
@@ -43,17 +36,13 @@ body {
   border-radius: 10px;
   border: 1px solid var(--stroke-color);
   background: var(--surface-color);
-
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   transition: opacity 1.6s ease-in;
-  
 }
-
 
 .displayOn {
   opacity: 1;
-  
 }
 
 #profile {
@@ -61,21 +50,11 @@ body {
   padding: 40px 24px 12px 24px;
 }
 
-#profile p {
-  padding: 12px;
-  font-family: "Montserrat", sans-serif;
-}
-
 #profile img {
   width: 112px;
   margin-bottom: 8px;
   border-radius: 100%;
   box-shadow: 0.1rem 0.1rem 1rem 0.1rem #41b9ff;
-}
-
-#profile p {
-  font-weight: 500;
-  line-height: 24px;
 }
 
 /*Switch*/
@@ -91,7 +70,6 @@ body {
   background: #fff var(--switch-bg-url) no-repeat center;
   border-radius: 50%;
   border: 0;
-
   position: absolute;
   z-index: 1;
   left: 0;
@@ -132,8 +110,6 @@ ul li {
 }
 
 ul li:hover {
-  -xpedu-transform: scale(1.02);
-  -ms-transform: scale(1.02);
   transform: scale(1.02);
   transition: transform 0.3s;
 }
@@ -147,13 +123,8 @@ ul li a {
   border-radius: 10px;
   position: relative;
   border: 1px solid var(--stroke-color);
-  /*  background: var(--surface-color); */
-  /* background: rgb(0,156,49);
-background: linear-gradient(227deg, rgba(0,156,49,1) 0%, rgba(0,5,145,1) 100%) ; */
-
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-
   transition: background 0.3s;
 }
 
@@ -161,34 +132,10 @@ ul li a:link {
   color: var(--text-color);
 }
 
-ul li a:before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index: -1;
-
-  /*  background: linear-gradient(90deg, #136FFA, #00f5cc, #0DFFBA, #0BDED3); */
-  background-size: 400%;
-  border-radius: 10px;
-  transition: 1s;
-}
-
 ul li a:hover {
-  border: 1.5px solid #007fff;
-  animation: animation 8s linear infinite;
-  border: none;
   background: linear-gradient(90deg, #136ffa, #00f5cc, #0dffba, #0bded3);
-  @keyframes animation {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 400%;
-    }
-  }
+  border: none;
+  animation: animation 8s linear infinite;
 }
 
 ul li a:hover::before {
@@ -203,10 +150,10 @@ ul li a:hover::before {
   background-size: 400%;
   border-radius: 35px;
   transition: 1s;
-}
-ul li a:hover::before {
+  -webkit-filter: blur(20px);
   filter: blur(20px);
 }
+
 ul li a:visited {
   color: var(--text-color);
 }
@@ -214,14 +161,6 @@ ul li a:visited {
 ul li a i {
   font-size: 24px;
   margin-right: 14px;
-}
-
-ul li:hover a {
-  color: var(--text-color-hover);
-}
-
-ul li:hover a i {
-  color: var(--text-color-hover);
 }
 
 footer {
@@ -238,86 +177,70 @@ footer a:visited {
   color: #fff;
 }
 
-/**/
+/* Keyframes Animation */
+@keyframes animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
 
-
-
+/* Video background */
 #bg_video {
   position: fixed;
-  
-   top: 0;
-  
+  top: 0;
   z-index: -100;
-  background: url("../video/video-bg-dark.mp4")
-    no-repeat;
+  background: url("../video/video-bg-dark.mp4") no-repeat;
   background-size: cover;
   overflow: hidden;
   transition: 1.6s;
-  
 }
 
 .box-black {
   filter: brightness(0.7);
 }
 
-
-
+/* Responsiveness */
 @media only screen and (max-width: 1680px) {
   #bg_video {
-    
     left: -130px;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1440px) {
   #bg_video {
-    
     left: -230px;
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-
 @media only screen and (max-width: 1200px) {
   #bg_video {
-    
     left: -350px;
   }
 }
 
 @media only screen and (max-width: 1024px) {
   #bg_video {
-   
     left: -420px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #bg_video {
-    
     left: -600px;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
   #bg_video {
-    
     left: -680px;
   }
 }
 
 @media only screen and (max-width: 425px) {
   #bg_video {
-   
     left: -750px;
   }
 }
-
-
-
-
-
-
-
