@@ -1,6 +1,6 @@
 :root {
   --text-color: white;
-  --text-color-hover: white;
+  --text-color-hover: rgb(247, 229, 93);
 
   --bg-mb-url: url(../img/Mobile/bg-dark-mobile.jpg);
   --bg-desktop-url: url(../img/Desktop/bg-dark.jpg);
@@ -32,6 +32,7 @@ body {
   opacity: 0;
   width: 360px;
   margin: 56px auto;
+  height: 685px;
   padding: 0 24px;
   border-radius: 10px;
   border: 1px solid var(--stroke-color);
@@ -132,10 +133,12 @@ ul li a:link {
   color: var(--text-color);
 }
 
-ul li a:hover {
+.text-color-hover:hover {
   background: linear-gradient(90deg, #136ffa, #00f5cc, #0dffba, #0bded3);
-  border: none;
+  border: #0dffba solid 1px;
   animation: animation 8s linear infinite;
+  color: var(--text-color-hover);
+  text-shadow: 2px 2px #6969698e;
 }
 
 ul li a:hover::before {
